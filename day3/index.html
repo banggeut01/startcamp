@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>첫번째 HTML</title>
+        <style>
+            h1 {
+                color: red;
+                text-align: center;
+            }
+            p {
+                color: violet;
+                text-align: right;
+            }
+            /* 태그 선택자 */
+            h2 {
+                color: tomato;
+            }
+            /* 클래스 선택자 */
+            .yellow {
+                color: yellow;
+            }
+            /* 아이디 선택자 */
+            #green {
+                color: green;
+            }
+            /* 우선순위
+            id > class > 태그
+            id는 문서에서 하나만 존재할 수 있다. 
+            class는 문서에서 여러개 존재할 수 있다. 
+            태그는 그냥 기본이다.
+             */
+        </style>
+    </head>
+    <body>
+        <h1>Happy, hacking!</h1>
+        <h2 id="green" class="red">안녕하세요.</h2>
+        <!-- id는 하나밖에 지정이 안된다. 우선순위가 그만큼 높다. -->
+        <h6>h6은 가장 작은 제목(heading)입니다.</h6>
+        <p>문단의 내용을<br>작성합니다.</p>
+        <p class="yellow">나는 노랑색이고 싶어요.</p>
+        <a href="https://google.com">구글로 가자!</a>
+        <br>
+        <!-- a 태그는 href 속성으로 해당하는 링크를 설정한다.-->
+        <img width="500" height="500" src="https://pbs.twimg.com/profile_images/1007313784153620480/2VJM9zOS_400x400.jpg">
+        <br>
+        <!-- img 태그는 닫는 태그가 없다.
+        src 속성값은 이미지의 경로이다.-->
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/WRDEcHT5Hf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- iframe은 다른 서버에 있는 동영상 같은 것을 가져올 때 쓴다.-->
+    </body>
+
