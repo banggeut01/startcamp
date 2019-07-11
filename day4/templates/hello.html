@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>플라스크</title>
+</head>
+<body>
+    <!-- jinja2 -->
+    <!-- {# {{% %}} #} 로직 코드 주석 -->
+    <!-- {# {{   }} #} 출력 코드 주석 -->
+    {% if name == '지니' %}
+        <h1>{{ name }}님, 안녕하십니까.</h1>
+    {% else %}
+        <h1>{{ name }}아, 안녕~~</h1>
+    {% endif %}
+</body>
+</html>
