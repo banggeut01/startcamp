@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ pick }}먹어!</h1>
+    <hr>
+    <ol>
+    <h2>==메뉴 리스트==</h2>
+        {% for menu in menus %}
+          <li>{{ menu }}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
