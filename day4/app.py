@@ -48,11 +48,23 @@ def result():
     mood = request.args.get('mood')
     weather = request.args.get('weather')
     playlist = {
-        '외로움' : '"https://www.youtube.com/embed/IPfJnp1guPc"'
+        '외로움' : ["https://www.youtube.com/embed/IPfJnp1guPc"]
     }
-    music = random.choice(playlist[mood])
+    music = random.choice(playlist.get(mood, []))
     return render_template('result_page.html', mood=mood, weather=weather, music=music)
 # http://ba99bfb3.ngrok.io/random 참고
+
+@app.route('/lotto')
+def lotto():
+    return render_template('lotto.html')
+
+@app.route('/lotto_result')
+def lotto_result():
+    name = request.args.get('name')
+    num = request.args.get('num')
+    random.seed(num) # => 값 고정
+    numbers = random.sample(range(1,46), 6)
+    return render_template('lotto_result.html', name=name, numbers=numbers)
 
 # main이면 계속 실행시킴
 if __name__ == '__main__':
